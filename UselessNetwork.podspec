@@ -19,7 +19,7 @@ s.author = { "Yehia Samak" => "ysamak17@gmail.com" }
 # 5
 s.homepage = "https://github.com/YehiaSherifSamak/UselessNetwork"
 
-# 6 
+# 6
 s.source = { :git => "https://github.com/YehiaSherifSamak/UselessNetwork.git",
              :tag => "#{s.version}" }
 
@@ -31,7 +31,7 @@ s.dependency 'SDWebImage'
 s.source_files = "UselessNetwork/**/*.{swift}"
 
 # 9
-s.resources = "UselessNetwork/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+#s.resources = "UselessNetwork/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
 s.swift_version = "5"
