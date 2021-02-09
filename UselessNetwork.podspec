@@ -11,7 +11,11 @@ s.requires_arc = true
 s.version = "0.1.0"
 
 # 3
-s.license = { :type => "MIT", :file => "LICENSE" }
+s.license = { :type => 'MIT', :text => <<-LICENSE
+                   Copyright 2012
+                   Permission is granted to...
+                 LICENSE
+               }
 
 # 4
 s.author = { "Yehia Samak" => "ysamak17@gmail.com" }
@@ -25,7 +29,7 @@ s.source = { :git => "https://github.com/YehiaSherifSamak/UselessNetwork.git",
 
 # 7
 s.framework = "UIKit"
-s.dependency 'SDWebImage'
+s.dependency 'SDWebImage', '~> 5.0.0'
 
 # 8
 s.source_files = "UselessNetwork/**/*.{swift}"
