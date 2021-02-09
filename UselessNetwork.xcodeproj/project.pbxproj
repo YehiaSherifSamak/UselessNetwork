@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DF3653B41A78DBA0C16B734 /* Pods_UselessNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FF8E6D7FFD9B33480F24C /* Pods_UselessNetwork.framework */; };
 		BBDCEFEE25D2A651009DF09F /* UselessNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = BBDCEFEC25D2A651009DF09F /* UselessNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBDCEFFA25D2A743009DF09F /* ImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCEFF925D2A743009DF09F /* ImageExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1FF8E6D7FFD9B33480F24C /* Pods_UselessNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UselessNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94ADF09E6136D9FD7FD086FF /* Pods-UselessNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UselessNetwork.release.xcconfig"; path = "Target Support Files/Pods-UselessNetwork/Pods-UselessNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		BBDCEFE925D2A651009DF09F /* UselessNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UselessNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDCEFEC25D2A651009DF09F /* UselessNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UselessNetwork.h; sourceTree = "<group>"; };
 		BBDCEFED25D2A651009DF09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBDCEFF925D2A743009DF09F /* ImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtention.swift; sourceTree = "<group>"; };
+		FEE40978A8302DA4F259413B /* Pods-UselessNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UselessNetwork.debug.xcconfig"; path = "Target Support Files/Pods-UselessNetwork/Pods-UselessNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DF3653B41A78DBA0C16B734 /* Pods_UselessNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010BE0ACAB35747028DF10EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEE40978A8302DA4F259413B /* Pods-UselessNetwork.debug.xcconfig */,
+				94ADF09E6136D9FD7FD086FF /* Pods-UselessNetwork.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BBDCEFDF25D2A651009DF09F = {
 			isa = PBXGroup;
 			children = (
 				BBDCEFEB25D2A651009DF09F /* UselessNetwork */,
 				BBDCEFEA25D2A651009DF09F /* Products */,
+				010BE0ACAB35747028DF10EF /* Pods */,
+				BFE339A1FE3CD0DC0D01D136 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +64,27 @@
 		BBDCEFEB25D2A651009DF09F /* UselessNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				BBDCF00225D2AAD1009DF09F /* Classes */,
 				BBDCEFEC25D2A651009DF09F /* UselessNetwork.h */,
 				BBDCEFED25D2A651009DF09F /* Info.plist */,
 			);
 			path = UselessNetwork;
+			sourceTree = "<group>";
+		};
+		BBDCF00225D2AAD1009DF09F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BBDCEFF925D2A743009DF09F /* ImageExtention.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BFE339A1FE3CD0DC0D01D136 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D1FF8E6D7FFD9B33480F24C /* Pods_UselessNetwork.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +105,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBDCEFF125D2A651009DF09F /* Build configuration list for PBXNativeTarget "UselessNetwork" */;
 			buildPhases = (
+				7234D19E5BD157E91F9FED9F /* [CP] Check Pods Manifest.lock */,
 				BBDCEFE425D2A651009DF09F /* Headers */,
 				BBDCEFE525D2A651009DF09F /* Sources */,
 				BBDCEFE625D2A651009DF09F /* Frameworks */,
@@ -94,6 +130,7 @@
 				TargetAttributes = {
 					BBDCEFE825D2A651009DF09F = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -125,11 +162,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7234D19E5BD157E91F9FED9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UselessNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BBDCEFE525D2A651009DF09F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDCEFFA25D2A743009DF09F /* ImageExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +323,9 @@
 		};
 		BBDCEFF225D2A651009DF09F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE40978A8302DA4F259413B /* Pods-UselessNetwork.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,6 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ysamak17-gmail.com.UselessNetwork";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,7 +349,9 @@
 		};
 		BBDCEFF325D2A651009DF09F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94ADF09E6136D9FD7FD086FF /* Pods-UselessNetwork.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
