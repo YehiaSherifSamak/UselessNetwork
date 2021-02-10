@@ -10,7 +10,7 @@ import SDWebImage
 
 
 extension UIImageView {
-    func downloadImageWithProgress(_ url: URL, placeholderImage: UIImage? = nil) {
+   public func downloadImageWithProgress(_ url: URL, placeholderImage: UIImage? = nil) {
         self.configureLoadingIndicator()
         sd_setImage(with: url, placeholderImage: placeholderImage ?? image) {
             [weak self]  (image, error, cacheType, imageURL) in
@@ -22,12 +22,12 @@ extension UIImageView {
         }
     }
     
-    func stopLoading() {
+   public func stopLoading() {
         sd_cancelCurrentImageLoad()
         stopLoadingAnimation()
     }
     
-    func stopLoadingAnimation() {
+    public func stopLoadingAnimation() {
         guard let currentIndicator = subviews.first as? UIActivityIndicatorView else { return }
         currentIndicator.stopAnimating()
     }
